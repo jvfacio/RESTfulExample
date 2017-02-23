@@ -1,14 +1,20 @@
 package com.mkyong.rest;
 
 public class Person {
-	private String name;
-
-	public String getName() {
-		return name;
+	private String fisrtName;
+	private String lastName;
+	public String getFisrtName() {
+		return fisrtName;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setFisrtName(String fisrtName) {
+		this.fisrtName = fisrtName;
 	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
 	
 }

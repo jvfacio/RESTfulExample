@@ -32,7 +32,7 @@ public class HelloWorldService {
 	public Person getPerson(@PathParam("param") String msg) {
  
 		Person p = new Person();
-		p.setName(msg);
+		p.setFisrtName(msg);
 		
 		//return Response.status(Response.Status.OK).entity(output).build();
 		return p;
@@ -46,7 +46,7 @@ public class HelloWorldService {
 	public Person createNewPerson(Person person) {
  
 		Person p = new Person();
-		p.setName(person.getName()+"_XXX");
+		p.setFisrtName(person.getFisrtName() + " " + person.getLastName());
 		
 		//return Response.status(Response.Status.OK).entity(output).build();
 		return p;
