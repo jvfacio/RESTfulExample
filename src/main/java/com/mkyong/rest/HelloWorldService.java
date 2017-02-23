@@ -54,10 +54,25 @@ public class HelloWorldService {
 	}
 	
 	@POST
-	@Path("/postXML")
+	@Path("/postJson2XML")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_XML)
 	public Person createNewPersonXML(Person person) {
+ 
+		Person p = new Person();
+		p.setFisrtName(person.getFisrtName() + " " + person.getLastName());
+		
+		//return Response.status(Response.Status.OK).entity(output).build();
+		return p;
+ 
+	}
+	
+	
+	@POST
+	@Path("/postXML2XML")
+	@Consumes(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_XML)
+	public Person createNewPerson_XML(Person person) {
  
 		Person p = new Person();
 		p.setFisrtName(person.getFisrtName() + " " + person.getLastName());
